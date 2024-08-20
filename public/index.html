@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js CRUD App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 5px;
+            width: 200px;
+        }
+        .user-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Management</h1>
+
+    <h2>Create User</h2>
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <button onclick="createUser()">Create</button>
+
+    <h2>Update User</h2>
+    <input type="number" id="updateId" placeholder="User ID" required>
+    <input type="text" id="updateName" placeholder="New Name" required>
+    <input type="email" id="updateEmail" placeholder="New Email" required>
+    <button onclick="updateUser()">Update</button>
+
+    <h2>Delete User</h2>
+    <input type="number" id="deleteId" placeholder="User ID" required>
+    <button onclick="deleteUser()">Delete</button>
+
+    <h2>All Users</h2>
+    <button onclick="getUsers()">Refresh List</button>
+
+    <div class="user-list" id="userList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
